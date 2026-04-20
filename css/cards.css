@@ -1,0 +1,642 @@
+/* CARDS — All card variants used across pages*/
+
+/* Base card */
+.card {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.card h2 {
+  font-family: var(--font-display);
+  font-size: 40px;
+}
+
+/* Clickable card */
+.card--link {
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    background var(--transition),
+    transform var(--transition-md);
+}
+
+.card--link:hover {
+  background: var(--carte-hover);
+  transform: translateY(-3px);
+}
+
+/* Rouge accent */
+.card--rouge {
+  background: var(--rouge);
+  border-color: var(--rouge);
+}
+
+/* Dark variant */
+.card--dark {
+  background: #1e1e1e;
+  border-color: rgba(245, 244, 245, 0.05);
+}
+
+/* Project card */
+.project-card {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color var(--transition),
+    transform var(--transition-md);
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+/* Grande card */
+.card_image {
+  width: 100%;
+  flex: 1;
+  background: var(--carte);
+  aspect-ratio: 16 / 7; /* ← ratio au lieu de height fixe */
+  max-height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Petite card */
+.project-card_img {
+  width: 100%;
+  flex: 1;
+  background: var(--carte);
+  aspect-ratio: 16 / 7;
+  max-height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card_img img,
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center; /* ← était "center top" */
+  display: block;
+  transition: transform var(--transition-md);
+}
+
+.project-card:hover .project-card_img img,
+.project-card:hover .card_image img {
+  transform: scale(1.05);
+}
+
+/* Placeholder quand pas d'image */
+.project-card_placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  background: linear-gradient(135deg, #3a3a3a 0%, #2a2828 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card_placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(177, 49, 49, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+.project-card_placeholder span {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--faint);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* Teintes alternées */
+.projets-bento li:nth-child(2) .project-card_placeholder {
+  background: linear-gradient(135deg, #383838 0%, #2c2a2a 100%);
+}
+.projets-bento li:nth-child(3) .project-card_placeholder {
+  background: linear-gradient(135deg, #363434 0%, #292929 100%);
+}
+.projets-bento li:nth-child(4) .project-card_placeholder {
+  background: linear-gradient(135deg, #353636 0%, #2a2c2e 100%);
+}
+.projets-bento li:nth-child(5) .project-card_placeholder {
+  background: linear-gradient(135deg, #363434 0%, #2c2a2a 100%);
+}
+.projets-bento li:nth-child(6) .project-card_placeholder {
+  background: linear-gradient(135deg, #353838 0%, #292c2a 100%);
+}
+.projets-bento li:nth-child(7) .project-card_placeholder {
+  background: linear-gradient(135deg, #343438 0%, #28282c 100%);
+}
+
+.project-card_info {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.project-card_name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--blanc);
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.project-card_specialty {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.project-card_arrow {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+  filter: invert(0) brightness(1);
+  opacity: 0.45;
+}
+
+.project-card:hover .project-card_arrow {
+  opacity: 1;
+  transform: rotate(-45deg) scale(1.15);
+}
+
+/*  Stat card  */
+.stat-card {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 140px;
+  transition: border-color var(--transition);
+  justify-content: center;
+}
+
+.stat-card_label {
+  font-size: 14px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.stat-card_value {
+  font-family: var(--font-display);
+  font-size: 60px;
+  color: var(--blanc);
+  line-height: 1;
+}
+
+.stat-card_desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/*  Tag pill  */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  background: rgba(245, 244, 245, 0.08);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/*  Methodo card  */
+.methodo-card {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition:
+    border-color var(--transition),
+    transform var(--transition-md);
+}
+
+.methodo-card_name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--blanc);
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.methodo-card_desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/*  Soft skill card  */
+.softskill-card {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition:
+    border-color var(--transition),
+    transform var(--transition-md);
+}
+
+.softskill-card i {
+  font-size: 20px;
+  color: var(--rouge);
+}
+
+.softskill-card_name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blanc);
+  line-height: 1.3;
+}
+
+/* ============================================================
+   CASE STUDY — Composants visuels
+   ============================================================ */
+
+/*  Grille insights  */
+.cs-insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+/*  Insight card  */
+.cs-insight-card {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-insight-card--rouge {
+  border-left: 3px solid var(--rouge);
+}
+
+.cs-insight-card--narrow {
+  width: auto;
+  height: auto;
+}
+
+.cs-insight-card_icon {
+  font-size: 18px;
+  color: var(--rouge);
+}
+
+.cs-insight-card_icon--muted {
+  color: var(--muted);
+}
+
+.cs-insight-card_title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blanc);
+  line-height: 1.3;
+}
+
+.cs-insight-card_title--quote {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.cs-insight-card_text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/*  Zones images  */
+.cs-img-block {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--carte);
+}
+
+.cs-img-block img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.cs-img-block--mb {
+  margin-bottom: 36px;
+}
+
+.cs-img-placeholder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #333333 0%, #272727 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.cs-img-placeholder--tall {
+  padding: 100px 0;
+}
+
+.cs-img-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(177, 49, 49, 0.06) 0%,
+    transparent 60%
+  );
+}
+
+.cs-img-placeholder i {
+  font-size: 28px;
+  color: var(--faint);
+  position: relative;
+  z-index: 1;
+}
+
+.cs-img-placeholder span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--faint);
+  position: relative;
+  z-index: 1;
+}
+
+.cs-img-caption {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Grille 2 screenshots */
+.cs-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+
+/*  Persona card  */
+.cs-persona {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.cs-persona_header {
+  padding: 24px 28px;
+  background: rgba(177, 49, 49, 0.12);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cs-persona_avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--carte-hover);
+  border: 2px solid var(--rouge);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 22px;
+  color: var(--rouge);
+}
+
+.cs-persona_name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--blanc);
+  line-height: 1;
+}
+
+.cs-persona_role {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.cs-persona_body {
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cs-persona_col-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.cs-persona_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.cs-persona_list li {
+  font-size: 13px;
+  color: var(--blanc);
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cs-persona_list li::before {
+  content: "→";
+  color: var(--rouge);
+  flex-shrink: 0;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/*  Quote card  */
+.cs-quotes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.cs-quotes-grid--mb {
+  margin-bottom: 40px;
+}
+
+.cs-quote {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.cs-quote::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 64px;
+  color: var(--rouge);
+  opacity: 0.3;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.cs-quote_text {
+  font-size: 14px;
+  color: var(--blanc);
+  line-height: 1.7;
+  font-style: italic;
+  padding-top: 16px;
+}
+
+.cs-quote_author {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/*  Itérations  */
+.cs-iterations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-iteration {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.cs-iteration_badge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(177, 49, 49, 0.15);
+  border: 1px solid rgba(177, 49, 49, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--rouge);
+  font-weight: 600;
+}
+
+.cs-iteration_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blanc);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.cs-iteration_desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/*  KPI grid  */
+.cs-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-bottom: 36px;
+}
+
+.cs-kpi {
+  background: var(--carte);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+
+.cs-kpi_value {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--blanc);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.cs-kpi_label {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}

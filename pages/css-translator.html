@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="CSS Translator - Etude de cas UX Design par Billal Boudlal." />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <title>CSS Translator - Billal Boudlal</title>
+
+  <link rel="stylesheet" href="../css/base.css" />
+
+  <link rel="stylesheet" href="../css/header.css" />
+
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <link rel="stylesheet" href="../css/buttons.css" />
+
+  <link rel="stylesheet" href="../css/cards.css" />
+
+  <link rel="stylesheet" href="../css/sections.css" />
+
+  <link rel="stylesheet" href="../css/animations.css" />
+
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body class="page-wrapper">
+
+  <header class="header" role="banner">
+
+    <a href="../index.html" class="header_logo">
+
+      <img src="../assets/icon/logo_boudlal_billal.svg" alt="Logo Billal Boudlal" width="38" height="48" />
+
+    </a>
+
+    <nav class="header_nav" id="header-nav" aria-label="Navigation principale">
+
+      <a href="apropos.html" class="header_link">À propos</a>
+
+      <a href="projets.html" class="header_link active">Projets</a>
+
+      <a href="contact.html" class="header_cta">Contact</a>
+
+    </nav>
+
+    <button class="header_burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="header-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main id="contenu-principal">
+
+    <!-- ======================================================
+         SECTION 1 - HERO
+         ====================================================== -->
+
+    <section class="cs-hero" aria-label="Hero  présentation du projet">
+
+      <p class="cs-hero_eyebrow">Etude de cas</p>
+
+      <h1 class="cs-hero_title">CSS Translator</h1>
+
+      <div class="cs-hero_meta">
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Rôle</span>
+
+          <span class="cs-hero_meta-value">UX/UI Design + Développement front-end</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Livrable</span>
+
+          <span class="cs-hero_meta-value">Outil web open source</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Secteur</span>
+
+          <span class="cs-hero_meta-value">Outils développeurs / Design</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Durée</span>
+
+          <span class="cs-hero_meta-value">3 semaines</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Année</span>
+
+          <span class="cs-hero_meta-value">2026</span>
+
+        </div>
+
+      </div>
+
+      <div class="btn-group">
+
+        <a href="http://css-translator.billal-boudlal.mds-paris.yt/" class="btn btn--primary btn--auto"
+          id="cta-voir-projet">
+          Voir le projet live
+          <img class="btn_arrow" src="../assets/icon/arrow.svg" alt="" />
+        </a>
+
+        <a href="https://github.com/Mazout-A" class="btn btn--ghost btn--auto" id="cta-github">GitHub</a>
+
+      </div>
+
+      <div class="cs-hero_cover">
+
+        <img src="../assets/maquette/home_css_translator.png" alt="">
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 2 - CONTEXTE ET LE VRAI PROBLEME
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="Contexte et problème">
+
+      <p class="cs-section_number">01 - Contexte</p>
+
+      <h2 class="cs-section_label">Problème</h2>
+
+      <div class="cs-2col cs-2col--wide">
+
+        <div>
+
+          <p class="cs-text">Les développeurs front-end et les designers qui codent jonglent quotidiennement entre
+            plusieurs frameworks CSS Tailwind sur un projet, Bootstrap chez un client, SASS en legacy. À chaque
+            changement de contexte, ils perdent un temps considérable à chercher dans la documentation la syntaxe
+            équivalente d'un composant qu'ils maîtrisent déjà dans un autre framework.</p>
+
+          <p class="cs-text">La solution en place était la recherche directe dans les documentations officielles ou sur
+            Stack Overflow. Le problème : elle oblige à quitter son éditeur, naviguer entre plusieurs onglets et
+            reformuler sa recherche dans chaque doc. Résultat : une interruption de 4 à 8 minutes par question,
+            plusieurs fois par jour, qui casse le flux de travail et ralentit la production.</p>
+
+        </div>
+
+        <div class="cs-insight-grid">
+
+          <div class="cs-insight-card cs-insight-card--rouge">
+
+            <i class="cs-insight-card_icon fa-solid fa-triangle-exclamation"></i>
+
+            <p class="cs-insight-card_title">Le changement de contexte coûte cher</p>
+
+            <p class="cs-insight-card_text">Passer d'un framework à un autre impose de mémoriser des syntaxes
+              radicalement différentes pour le même résultat visuel. Sans aide, chaque oubli coûte plusieurs minutes de
+              recherche.</p>
+
+          </div>
+
+          <div class="cs-insight-card cs-insight-card--rouge">
+
+            <i class="cs-insight-card_icon fa-solid fa-triangle-exclamation"></i>
+
+            <p class="cs-insight-card_title">Les documentations ne se parlent pas</p>
+
+            <p class="cs-insight-card_text">Aucun outil n'agrège les syntaxes de plusieurs frameworks en un seul
+              endroit. Tailwind, Bootstrap et Bulma ont chacun leur doc distincte, sans équivalences entre elles.</p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-lightbulb"></i>
+
+            <p class="cs-insight-card_title">Opportunité : la traduction instantanée</p>
+
+            <p class="cs-insight-card_text">Si un développeur peut écrire ce qu'il veut faire en langage naturel et
+              obtenir le snippet dans son framework cible en moins de 3 secondes, le flux de travail n'est plus
+              interrompu.</p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-lightbulb"></i>
+
+            <p class="cs-insight-card_title">Contrainte : zéro coût de fonctionnement</p>
+
+            <p class="cs-insight-card_text">Le projet devait être 100% gratuit à déployer et maintenir. Toute la logique
+              de correspondance a été construite en dur côté client sans API externe ni backend.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 3 - RECHERCHE ET PERSONA
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="Recherche et personas">
+
+      <p class="cs-section_number">02 - Recherche</p>
+
+      <h2 class="cs-section_label">Persona</h2>
+
+      <p class="cs-text cs-text--intro-lg">J'ai mené 5 entretiens informels de 20 à 30 minutes avec des étudiants en
+        développement web et des développeurs juniors en alternance, recrutés dans mon réseau MDS et sur des serveurs
+        Discord dédiés au front-end. Les sessions ont été conduites en visio, sans enregistrement, avec prise de notes
+        en temps réel sur Notion. L'objectif : identifier les moments précis où le changement de framework crée une
+        friction dans le travail quotidien.</p>
+
+      <div class="cs-2col mb-gap">
+
+        <div class="cs-persona">
+
+          <div class="cs-persona_header">
+
+            <div class="cs-persona_avatar"><i class="fa-solid fa-user"></i></div>
+
+            <div>
+
+              <p class="cs-persona_name">Lucas, 22 ans</p>
+
+              <p class="cs-persona_role">Étudiant Bachelor Dev Web alternant en agence</p>
+
+            </div>
+
+          </div>
+
+          <div class="cs-persona_body">
+
+            <div>
+
+              <p class="cs-persona_col-title">Frustrations</p>
+
+              <ul class="cs-persona_list">
+
+                <li>Jongle entre Tailwind en cours et Bootstrap chez son employeur deux syntaxes à maintenir en
+                  parallèle</li>
+
+                <li>Perd le fil de ce qu'il codait à chaque aller-retour vers la documentation</li>
+
+                <li>Se sent "nul" quand il cherche la même chose pour la troisième fois</li>
+
+              </ul>
+
+            </div>
+
+            <div>
+
+              <p class="cs-persona_col-title">Besoins réels</p>
+
+              <ul class="cs-persona_list">
+
+                <li>Un accès rapide aux équivalences sans quitter son éditeur</li>
+
+                <li>Comprendre les différences entre frameworks, pas juste copier-coller</li>
+
+                <li>Un outil qui accepte les recherches en français</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cs-persona">
+
+          <div class="cs-persona_header">
+
+            <div class="cs-persona_avatar"><i class="fa-solid fa-user"></i></div>
+
+            <div>
+
+              <p class="cs-persona_name">Inès, 26 ans</p>
+
+              <p class="cs-persona_role">Designer UI qui code freelance Webflow & React</p>
+
+            </div>
+
+          </div>
+
+          <div class="cs-persona_body">
+
+            <div>
+
+              <p class="cs-persona_col-title">Frustrations</p>
+
+              <ul class="cs-persona_list">
+
+                <li>Maîtrise le CSS natif mais bloque dès qu'un client impose Tailwind ou Bootstrap</li>
+
+                <li>Les documentations officielles sont trop verbeuses pour trouver vite une réponse simple</li>
+
+                <li>N'arrive pas à mémoriser les classes utilitaires Tailwind entre deux projets</li>
+
+              </ul>
+
+            </div>
+
+            <div>
+
+              <p class="cs-persona_col-title">Besoins réels</p>
+
+              <ul class="cs-persona_list">
+
+                <li>Décrire ce qu'elle veut faire avec ses mots, obtenir le code immédiatement</li>
+
+                <li>Un point de référence unique pour comparer les approches entre frameworks</li>
+
+                <li>Un outil léger, sans compte à créer, utilisable en 10 secondes</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="cs-insight-card cs-insight-card--rouge cs-insight-card--narrow">
+
+        <i class="cs-insight-card_icon fa-solid fa-quote-left"></i>
+
+        <p class="cs-insight-card_title cs-insight-card_title--quote">"Je connais Tailwind, je connais Bootstrap, mais à
+          chaque fois que je switch je repars de zéro c'est épuisant de googler la même chose en boucle."</p>
+
+        <p class="cs-insight-card_text"> Lucas, participant n°2</p>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 4 - USER JOURNEY MAP
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="User Journey Map">
+
+      <p class="cs-section_number">03 - Analyse</p>
+
+      <h2 class="cs-section_label">User Journey Map</h2>
+
+      <p class="cs-text cs-text--intro">Le parcours de Lucas depuis le moment où il identifie un besoin CSS dans son
+        code jusqu'à l'intégration réussie du bon snippet dans son projet en passant par la friction centrale de la
+        recherche multi-docs.</p>
+
+      <div class="cs-journey-wrap"><table class="cs-journey" aria-label="Customer journey map">
+
+        <thead>
+
+          <tr class="cs-journey_steps">
+
+            <th class="cs-journey_row-label" scope="col"></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">1. Blocage code</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">2. Recherche</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">3. Navigation docs</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">4. Adaptation</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">5. Intégration</span></th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Actions</th>
+
+            <td class="cs-journey_cell">Identifie qu'il doit centrer un élément en Bootstrap alors qu'il ne connaît que
+              Tailwind</td>
+
+            <td class="cs-journey_cell">Ouvre un nouvel onglet, tape "center element Bootstrap" sur Google</td>
+
+            <td class="cs-journey_cell">Parcourt 2 à 3 résultats, compare des réponses Stack Overflow de 2019 et 2023
+            </td>
+
+            <td class="cs-journey_cell">Teste le code trouvé, constate que la version ne correspond pas à son projet
+            </td>
+
+            <td class="cs-journey_cell">Trouve enfin la bonne syntaxe, l'intègre et reprend son travail</td>
+
+          </tr>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Pensées</th>
+
+            <td class="cs-journey_cell">"Je sais ce que je veux faire, juste pas comment l'écrire ici"</td>
+
+            <td class="cs-journey_cell">"Je vais trouver ça en 30 secondes"</td>
+
+            <td class="cs-journey_cell">"Ces réponses sont contradictoires, laquelle est la bonne ?"</td>
+
+            <td class="cs-journey_cell">"Pourquoi ça ne marche pas, j'ai copié exactement ce qu'il y avait"</td>
+
+            <td class="cs-journey_cell">"Enfin. J'ai perdu 10 minutes pour 2 lignes de code"</td>
+
+          </tr>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Emotions</th>
+
+            <td class="cs-journey_cell">Neutre</td>
+
+            <td class="cs-journey_cell">Positif</td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">Frustré</td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">Perdu</td>
+
+            <td class="cs-journey_cell">Soulagé</td>
+
+          </tr>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Frictions</th>
+
+            <td class="cs-journey_cell">-</td>
+
+            <td class="cs-journey_cell">-</td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">⚠ Résultats contradictoires, versions obsolètes
+              mélangées aux récentes</td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">⚠ Code copié non adapté à la version du framework
+              utilisée en projet</td>
+
+            <td class="cs-journey_cell">-</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+      </div>
+
+      <p class="cs-img-caption">Parcours de Lucas développeur web en alternance sur une tâche CSS de routine</p>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 5 - USER FLOW
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="Architecture  User Flow">
+
+      <p class="cs-section_number">04 - Architecture</p>
+
+      <h2 class="cs-section_label">User Flow</h2>
+
+      <div class="cs-2col cs-2col--wide">
+
+        <div>
+
+          <p class="cs-text">L'architecture repose sur un flux unique, linéaire et sans détour : l'utilisateur arrive
+            sur une seule page, choisit son framework cible, tape ce qu'il cherche ou clique une action rapide, et
+            obtient immédiatement le snippet. Pas de navigation, pas d'écran intermédiaire. Ce choix découle directement
+            des entretiens : la friction venait précisément de la multiplicité des étapes pour atteindre un résultat
+            simple.</p>
+
+          <p class="cs-text">La sidebar catégorisée répond à un besoin de découverte certains utilisateurs ne savent
+            pas exactement comment formuler leur besoin. Les quick actions leur permettent de partir d'un exemple. La
+            mini-doc, accessible via un onglet dédié, est volontairement séparée du flux principal pour ne pas alourdir
+            l'expérience des utilisateurs qui savent déjà ce qu'ils cherchent.</p>
+
+        </div>
+
+        <div class="cs-img-block">
+
+          <img src="../assets/user-flow/CSS Translator - User Flow.png" alt="">
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 6 - LA SOLUTION TECHNIQUE (MVP)
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="Solution technique  MVP">
+
+      <p class="cs-section_number">05 - Solution</p>
+
+      <h2 class="cs-section_label">MVP</h2>
+
+      <div class="cs-img-block cs-img-block--mb">
+
+        <img src="../assets/maquette/home_css_translator.png" alt="">
+
+      </div>
+
+      <div class="cs-2col">
+
+        <div>
+
+          <p class="cs-text"><strong>Ce que j'ai construit :</strong> Une application React à page unique composée d'une
+            sidebar avec des catégories et des badgess cliquables, d'un sélecteur de framework en tabs, et d'une zone de
+            résultat qui affiche instantanément le snippet correspondant. L'utilisateur peut aussi taper en langage
+            naturel (français ou anglais) le moteur de correspondance par mots-clés retrouve le bon snippet sans
+            serveur.</p>
+
+          <p class="cs-text"><strong>Choix techniques :</strong> J'ai choisi HTML, CSS et JavaScript vanilla sans
+            framework, sans dépendances. Le HTML/CSS a été structuré avec l'aide de l'IA pour gagner du temps sur la
+            mise en page et le design system. Le JavaScript moteur de recherche par mots-clés, gestion d'état, switch
+            de framework instantané a été entièrement écrit par moi, puis optimisé avec l'IA une fois ma version
+            terminée. J'ai écarté toute API externe pour garder l'outil 100% gratuit et déployable sans backend.</p>
+
+          <p class="cs-text"><strong>Ce qui n'est PAS dans le MVP :</strong> La génération de snippets à la demande via
+            IA (écarté pour zéro coût), un système de favoris, et la comparaison côte à côte de plusieurs frameworks
+            simultanément. Ces fonctionnalités sont prévues en v2.</p>
+
+        </div>
+
+        <div class="cs-stack">
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-code"></i>
+
+            <p class="cs-insight-card_title">Stack technique</p>
+
+            <p class="cs-insight-card_text">HTML5, CSS3, JavaScript vanilla aucun framework, aucune dépendance.
+              Déploiement statique sur hébergement mutualisé. Design réalisé dans Figma. Snippets hardcodés dans un
+              fichier JS dédié.</p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-bullseye"></i>
+
+            <p class="cs-insight-card_title">Décision de priorisation</p>
+
+            <p class="cs-insight-card_text">Couvrir 12 cas d'usage CSS en profondeur plutôt que 50 superficiellement.
+              Qualité des snippets avant quantité chaque snippet vérifié manuellement dans les 9 frameworks.</p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-shield-halved"></i>
+
+            <p class="cs-insight-card_title">Contrainte technique majeure</p>
+
+            <p class="cs-insight-card_text">Moteur de recherche sans serveur. Résolu avec une liste de synonymes par
+              snippet (mots-clés fr et en) une correspondance partielle suffit à retrouver le bon résultat.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 7 - TESTS ET AVIS UTILISATEURS
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="Tests utilisateurs et retours">
+
+      <p class="cs-section_number">06 - Tests</p>
+
+      <h2 class="cs-section_label">Ce que les gens ont dit</h2>
+
+      <p class="cs-text cs-text--intro">J'ai testé le prototype avec 4 participants recrutés dans mon réseau (2
+        étudiants, 1 développeur junior en poste, 1 designer qui code). Chaque session durait environ 5 minutes en
+        visio 50 minutes de tâches libres sur l'outil, 5 minutes de questions ouvertes. Aucun script imposé : je
+        voulais observer comment ils exploraient naturellement l'interface.</p>
+
+      <div class="cs-quotes-grid cs-quotes-grid--mb">
+
+        <div class="cs-quote">
+
+          <p class="cs-quote_text">"J'ai tapé 'centrer' et ça m'a sorti exactement ce que je cherchais en Tailwind.
+            C'est bête mais c'est ce dont j'ai besoin tous les jours."</p><span class="cs-quote_author">Participant n°1
+            Étudiant dev web, 21 ans</span>
+
+        </div>
+
+        <div class="cs-quote">
+
+          <p class="cs-quote_text">"Je savais pas trop comment chercher au début, j'ai cliqué sur les badgess et là j'ai
+            compris le principe. Peut-être mettre un exemple dans le placeholder de la recherche ?"</p><span
+            class="cs-quote_author">Participant n°2 Designer UI, 25 ans</span>
+
+        </div>
+
+        <div class="cs-quote">
+
+          <p class="cs-quote_text">"Le fait de pouvoir switcher de framework sans re-taper la recherche, c'est vraiment
+            malin. On voit d'un coup à quel point les syntaxes sont différentes."</p><span
+            class="cs-quote_author">Participant n°3 Développeur junior, 23 ans</span>
+
+        </div>
+
+        <div class="cs-quote">
+
+          <p class="cs-quote_text">"J'aurais aimé pouvoir copier le snippet directement depuis la sidebar sans avoir à
+            cliquer sur le badges d'abord. Une étape de trop."</p>
+
+          <span class="cs-quote_author">Participant n°4 Étudiant alternant, 22 ans</span>
+
+        </div>
+
+      </div>
+
+      <h3 class="cs-subsection-title">Ce que j'ai changé.</h3>
+
+      <div class="cs-iterations">
+
+        <div class="cs-iteration">
+
+          <div class="cs-iteration_badge">1</div>
+
+          <div>
+
+            <p class="cs-iteration_label">Le placeholder de la recherche n'orientait pas assez</p>
+
+            <p class="cs-iteration_desc">3 participants sur 4 ont hésité avant de taper leur première recherche. J'ai
+              remplacé le placeholder générique par un exemple concret : "ex: bouton primaire, modal, grid 3
+              colonnes..." ce qui a réduit le temps avant la première action.</p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-iteration">
+
+          <div class="cs-iteration_badge">2</div>
+
+          <div>
+
+            <p class="cs-iteration_label">Le badges actif n'était pas assez visible dans la sidebar</p>
+
+            <p class="cs-iteration_desc">Après avoir cliqué un badges, les participants ne savaient plus quel snippet
+              était affiché. J'ai ajouté une mise en évidence couleur avec la teinte du framework actif sur le badges
+              sélectionné, créant un lien visuel clair entre la sidebar et la zone de résultat.</p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-iteration">
+
+          <div class="cs-iteration_badge">3</div>
+
+          <div>
+
+            <p class="cs-iteration_label">Ajout du lien vers la mini-doc depuis la zone de résultat vide</p>
+
+            <p class="cs-iteration_desc">Quand une recherche ne retournait rien, l'utilisateur était bloqué sans piste.
+              J'ai ajouté dans l'état vide un lien direct vers la mini-doc suggestion venue du participant n°2 et
+              intégrée telle quelle.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         SECTION 8 - BILAN ET APPRENTISSAGE
+         ====================================================== -->
+
+    <section class="cs-section" aria-label="Bilan et apprentissages">
+
+      <p class="cs-section_number">07 - Bilan</p>
+
+      <h2 class="cs-section_label">Ce que ça a produit</h2>
+
+      <div class="cs-kpi-grid">
+
+        <div class="cs-kpi">
+
+          <p class="cs-kpi_value">100%</p>
+
+          <p class="cs-kpi_label">des participants ont trouvé le snippet recherché sans aide extérieure lors du test</p>
+
+        </div>
+
+        <div class="cs-kpi">
+
+          <p class="cs-kpi_value">4,1/5</p>
+
+          <p class="cs-kpi_label">Score de satisfaction moyen sur la facilité d'utilisation perçue</p>
+
+        </div>
+
+        <div class="cs-kpi">
+
+          <p class="cs-kpi_value">&lt; 8s</p>
+
+          <p class="cs-kpi_label">Temps moyen pour obtenir un snippet après l'arrivée sur l'outil</p>
+
+        </div>
+
+      </div>
+
+      <div class="cs-2col">
+
+        <div>
+
+          <h3 class="cs-subsection-title">Ce que j'ai appris.</h3>
+
+          <p class="cs-text">J'ai appris que la valeur d'un outil développeur ne tient pas à sa complexité technique
+            elle tient à la précision avec laquelle il réduit une friction précise. Je pensais que les utilisateurs
+            voudraient une génération de snippets via une IA, mais les tests ont montré qu'ils préféraient des réponses
+            instantanées et fiables à des réponses "intelligentes" mais lentes ou incertaines.</p>
+
+          <p class="cs-text"><strong>Ce que je ferais différemment :</strong> Je partirais plus vite sur un prototype
+            cliquable avant de coder. J'ai perdu du temps à construire des fonctionnalités que les tests ont remises en
+            question. Une maquette Figma testée en amont aurait changé des décisions d'architecture importantes.</p>
+
+        </div>
+
+        <div>
+
+          <h3 class="cs-subsection-title">La suite.</h3>
+
+          <p class="cs-text">La v2 prévoit d'étendre la bibliothèque à 40 snippets, d'ajouter une vue comparaison côte à
+            côte entre deux frameworks, et d'intégrer un système de favoris. À plus long terme, une version CLI est
+            envisagée pour utiliser CSS Translator directement depuis le terminal sans quitter son éditeur.</p>
+
+          <div class="btn-group btn-group--mt">
+
+            <a href="#" class="btn btn--primary btn--auto" id="cta-live">Voir le projet live<img class="btn_arrow"
+                src="../assets/icon/arrow.svg" alt="" /></a>
+
+            <a href="https://github.com/Mazout-A" class="btn btn--ghost btn--auto">GitHub</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Navigation projets -->
+
+  <nav class="cs-nav" aria-label="Navigation entre projets">
+
+    <a href="../pages/typedirecteur.html" class="cs-nav_link" id="nav-precedent">
+
+      <span class="cs-nav_direction">← Projet précédent</span>
+
+      <span class="cs-nav_title">TypeDirecteur</span>
+
+    </a>
+
+    <a href="projet-bientot.html" class="cs-nav_link cs-nav_link--next" id="nav-suivant">
+
+      <span class="cs-nav_direction">Projet suivant →</span>
+
+      <span class="cs-nav_title">Bientôt disponible</span>
+
+    </a>
+
+  </nav>
+
+  <footer class="footer" role="contentinfo">
+
+    <a href="mailto:Billalboudlal.pro@gmail.com" class="footer_mail">Billalboudlal.pro@gmail.com</a>
+
+    <div class="footer_bottom">
+
+      <div class="footer_separator"></div>
+
+      <div class="footer_socials">
+
+
+        <div class="footer_logo">
+
+          <a href="../index.html" class="footer_social-link">
+
+            <img src="../assets/icon/logo_boudlal_billal.svg" alt="Logo" />
+
+          </a>
+
+        </div>
+
+        <a href="https://github.com/Mazout-A" class="footer_social-link" target="_blank" rel="noopener">
+
+          <img src="../assets/icon/Github.svg" alt="GitHub" />
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/billal-boudlal-a6442933a/" class="footer_social-link" target="_blank"
+          rel="noopener">
+
+          <img src="../assets/icon/linkedin.svg" alt="LinkedIn" />
+
+        </a>
+
+      </div>
+
+      <nav class="footer_mentions" aria-label="Mentions légales">
+
+        <a href="#" class="footer_mention-link">Mention légale</a>
+
+        <span>© 2026 Boudlal Billal</span>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+  <script src="../js/app.js"></script>
+
+</body>
+
+</html>

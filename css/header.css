@@ -1,0 +1,107 @@
+/* HEADER — Fixed pill nav, auto-hide on scroll*/
+.header {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: calc(100% - 200px);
+  max-width: 1240px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  transition:
+    top 0.35s ease,
+    opacity 0.35s ease,
+    background var(--transition);
+}
+
+/* Auto-hide state (added by JS on scroll down) */
+.header.header--hidden {
+  top: -80px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo img {
+  width: 38px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+
+.header_logo:hover img {
+  transform: scale(1.08);
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header_link {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.header_link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--blanc);
+  transition: width var(--transition);
+}
+
+.header_link:hover,
+.header_link.active {
+  color: var(--blanc);
+}
+
+.header_link:hover::after,
+.header_link.active::after {
+  width: 100%;
+}
+
+.header_cta {
+  background: var(--rouge);
+  color: var(--blanc);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 22px;
+  border-radius: var(--radius-pill);
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.header_cta:hover {
+  background: var(--rouge-dark);
+  transform: translateY(-1px);
+}
+
+.header_cta:active {
+  transform: translateY(0);
+}
+
+/* Burger — caché en desktop, visible en mobile via responsive.css */
+.header_burger {
+  display: none;
+}

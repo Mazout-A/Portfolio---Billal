@@ -1,0 +1,633 @@
+/* ============================================================
+   RESPONSIVE.CSS
+   Breakpoints :
+   - Tablette : max-width 1024px
+   - Mobile   : max-width 768px
+   - Petit mobile : max-width 480px
+   ============================================================ */
+
+/* ============================================================
+   TABLETTE — 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .header {
+    width: calc(100% - 48px);
+  }
+
+  /* Sections padding */
+  .section,
+  .section--sm {
+    padding: 48px 48px;
+  }
+
+  .section--flush { padding-top: 0; }
+  .section--tight { padding-top: 24px; }
+  .section--hero  { padding-top: 32px; }
+
+  .page-title {
+    padding: 40px 48px 28px;
+  }
+
+  /* Hero bento */
+  .bento--hero {
+    grid-template-columns: 1fr 280px;
+  }
+
+  .hero-card {
+    padding: 36px 40px;
+  }
+
+  .hero-card_heading {
+    font-size: clamp(26px, 3vw, 44px);
+  }
+
+  /* About bento homepage */
+  .about-bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-bento_card {
+    grid-column: span 2;
+  }
+
+  .about-bento_stats {
+    flex-direction: row;
+    grid-column: span 2;
+  }
+
+  /* Projets bento */
+  .projets-bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projets-bento li:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .projets-bento li:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  /* About page grid */
+  .about-grid {
+    grid-template-columns: 280px 1fr;
+  }
+
+  /* Stats bento page apropos */
+  .stats-bento {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Contact grid */
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  /* Methodo grid */
+  .methodo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Soft skills */
+  .softskills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Case study */
+  .cs-hero {
+    padding: 36px 48px 48px;
+  }
+
+  .cs-section {
+    padding: 56px 48px;
+  }
+
+  .cs-kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cs-nav {
+    padding: 48px 48px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 48px 48px 32px;
+  }
+
+  .footer_separator {
+    width: 100%;
+  }
+
+  .footer_socials {
+    gap: 40px;
+  }
+}
+
+/* ============================================================
+   MOBILE — 768px
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* ===== HEADER — burger menu ===== */
+  .header {
+    width: calc(100% - 32px);
+    top: 12px;
+    padding: 10px 16px;
+    position: fixed;
+  }
+
+  .header_nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: rgba(24, 24, 24, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    z-index: 200;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  .header_nav.nav--open {
+    display: flex;
+  }
+
+  .header_link {
+    font-size: 15px;
+    font-family: var(--font-body);
+    color: var(--muted);
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), color var(--transition);
+  }
+
+  .header_link:hover,
+  .header_link.active {
+    background: rgba(245, 244, 245, 0.06);
+    color: var(--blanc);
+  }
+
+  .header_link::after {
+    display: none;
+  }
+
+  .header_cta {
+    font-size: 14px;
+    padding: 10px 16px;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  /* Burger button */
+  .header_burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 300;
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .header_burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--blanc);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .header_burger.burger--open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header_burger.burger--open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header_burger.burger--open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ===== PAGE WRAPPER ===== */
+  .page-wrapper {
+    padding-top: 80px;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section,
+  .section--sm {
+    padding: 36px 20px;
+  }
+
+  .section--flush { padding-top: 0; }
+  .section--tight { padding-top: 20px; }
+  .section--hero  { padding-top: 24px; }
+
+  .page-title {
+    padding: 28px 20px 20px;
+  }
+
+  /* ===== HERO ===== */
+  .bento--hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-col-right {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .hero-col-right .photo-card {
+    flex: 1;
+    min-height: 200px;
+  }
+
+  .hero-dispo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-card {
+    padding: 28px 24px;
+    gap: 24px;
+    min-height: auto;
+  }
+
+  .hero-card_heading {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .hero-card_desc {
+    font-size: 14px;
+  }
+
+  /* ===== SCROLL BANNER ===== */
+  .scroll-banner_item {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  /* ===== ABOUT BENTO HOMEPAGE ===== */
+  .about-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .about-bento_card {
+    grid-column: span 1;
+  }
+
+  .about-bento_stats {
+    flex-direction: row;
+    grid-column: span 1;
+  }
+
+  .about-bento_heading {
+    font-size: 36px;
+  }
+
+  /* ===== PROJETS BENTO ===== */
+  .projets-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .projets-bento li:nth-child(1),
+  .projets-bento li:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .section-header_title {
+    font-size: 40px;
+  }
+
+  /* ===== SERVICES ===== */
+  .services-title {
+    font-size: 40px;
+  }
+
+  .services-title-sm {
+    font-size: 36px;
+  }
+
+  .service-row_inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .service-row_name {
+    font-size: 20px;
+    min-width: auto;
+  }
+
+  /* ===== PAGE ABOUT ===== */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    grid-row: span 1;
+    max-height: 320px;
+  }
+
+  .about-photo img {
+    min-height: 280px;
+    max-height: 320px;
+    object-position: center top;
+  }
+
+  .stats-bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card_value {
+    font-size: 44px;
+  }
+
+  /* ===== HARD SKILLS ===== */
+  .skills-logos {
+    gap: 16px;
+  }
+
+  .skill-logo {
+    width: 52px;
+  }
+
+  /* ===== METHODO ===== */
+  .methodo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== SOFT SKILLS ===== */
+  .softskills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-accroche_title {
+    font-size: 36px;
+  }
+
+  .contact-accroche_value {
+    font-size: 40px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 40px 20px 24px;
+    gap: 24px;
+  }
+
+  .footer_socials {
+    gap: 28px;
+  }
+
+  .footer_mentions {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ===== CASE STUDY ===== */
+  .cs-hero {
+    padding: 28px 20px 40px;
+  }
+
+  .cs-hero_title {
+    font-size: clamp(48px, 12vw, 80px);
+  }
+
+  .cs-hero_meta {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .cs-section {
+    padding: 48px 20px;
+  }
+
+  .cs-section_label {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .cs-2col,
+  .cs-2col--wide {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-insight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-persona_body {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-quotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-kpi_value {
+    font-size: 36px;
+  }
+
+  .cs-img-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-nav {
+    grid-template-columns: 1fr;
+    padding: 36px 20px;
+  }
+
+  /* ===== JOURNEY MAP — scroll horizontal propre ===== */
+
+  /* Wrapper scrollable avec fade sur le bord droit */
+  .cs-journey-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius);
+    position: relative;
+  }
+
+  /* Indication visuelle que le tableau scrolle */
+  .cs-journey-wrap::after {
+    content: "→ Faites défiler";
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    padding: 8px 0 0;
+    opacity: 0.7;
+  }
+
+  /* Le tableau garde une largeur minimale pour rester lisible */
+  .cs-journey {
+    min-width: 640px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  /* Colonne label (Actions, Pensées...) sticky à gauche */
+  .cs-journey th:first-child,
+  .cs-journey td:first-child,
+  .cs-journey_row-label {
+    position: sticky;
+    left: 0;
+    background: #272727;
+    z-index: 2;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Header étapes — fond distinct */
+  thead .cs-journey_row-label,
+  .cs-journey thead th:first-child {
+    background: #2e2e2e;
+  }
+
+  /* Taille de police réduite pour les cellules */
+  .cs-journey_step-name {
+    font-size: 13px;
+  }
+
+  .cs-journey_step-label {
+    font-size: 10px;
+  }
+
+  .cs-journey_cell {
+    font-size: 11px;
+  }
+
+  .cs-journey_step,
+  .cs-journey_cell {
+    padding: 10px 8px;
+  }
+
+  .cs-journey_row-label {
+    padding: 10px 8px;
+    min-width: 80px;
+  }
+
+  /* ===== BENTO 2/3 col → 1 col ===== */
+  .bento--2col,
+  .bento--3col {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== SOON CARD ===== */
+  .soon-wrapper {
+    padding: 40px 20px;
+  }
+
+  .soon-card {
+    padding: 48px 28px;
+  }
+}
+
+/* ============================================================
+   PETIT MOBILE — 480px
+   ============================================================ */
+@media (max-width: 480px) {
+
+  /* Sections */
+  .section,
+  .section--sm {
+    padding: 28px 16px;
+  }
+
+  .page-title {
+    padding: 20px 16px 16px;
+  }
+
+  /* Hero */
+  .hero-card {
+    padding: 24px 18px;
+  }
+
+  .hero-col-right {
+    flex-direction: column;
+  }
+
+  .hero-col-right .photo-card {
+    min-height: 240px;
+    max-height: 280px;
+  }
+
+  /* Stats */
+  .stats-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .about-bento_stats {
+    flex-direction: column;
+  }
+
+  /* Soft skills */
+  .softskills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Boutons */
+  .btn {
+    font-size: 16px;
+    padding: 11px 20px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 32px 16px 20px;
+  }
+
+  .footer_socials {
+    gap: 20px;
+  }
+
+  /* Case study */
+  .cs-hero {
+    padding: 20px 16px 32px;
+  }
+
+  .cs-section {
+    padding: 36px 16px;
+  }
+
+  .cs-nav {
+    padding: 28px 16px;
+  }
+}

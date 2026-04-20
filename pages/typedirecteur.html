@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="TypeDirecteur - Etude de cas UX Research par Billal Boudlal." />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <title>TypeDirecteur - Billal Boudlal</title>
+
+  <link rel="stylesheet" href="../css/base.css" />
+
+  <link rel="stylesheet" href="../css/header.css" />
+
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <link rel="stylesheet" href="../css/buttons.css" />
+
+  <link rel="stylesheet" href="../css/cards.css" />
+
+  <link rel="stylesheet" href="../css/sections.css" />
+
+  <link rel="stylesheet" href="../css/animations.css" />
+
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body class="page-wrapper">
+
+  <header class="header" role="banner">
+
+    <a href="../index.html" class="header_logo">
+
+      <img src="../assets/icon/logo_boudlal_billal.svg" alt="Logo Billal Boudlal" width="38" height="48" />
+
+    </a>
+
+    <nav class="header_nav" id="header-nav" aria-label="Navigation principale">
+
+      <a href="apropos.html" class="header_link">À propos</a>
+
+      <a href="projets.html" class="header_link active">Projets</a>
+
+      <a href="contact.html" class="header_cta">Contact</a>
+
+    </nav>
+
+    <button class="header_burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="header-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main id="contenu-principal">
+
+    <!-- SECTION 1 -->
+
+    <section class="cs-hero" aria-label="Hero — présentation du projet">
+
+      <p class="cs-hero_eyebrow">Etude de cas</p>
+
+      <h1 class="cs-hero_title">TypeDirecteur</h1>
+
+      <div class="cs-hero_meta">
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">UX Research + développeur</span>
+
+          <span class="cs-hero_meta-value">UX Research + développement</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Livrable</span>
+
+          <span class="cs-hero_meta-value">MVP</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Secteur</span>
+
+          <span class="cs-hero_meta-value">Typographie</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Durée</span>
+
+          <span class="cs-hero_meta-value">2 semaines</span>
+
+        </div>
+
+        <div class="cs-hero_meta-item">
+
+          <span class="cs-hero_meta-label">Année</span>
+
+          <span class="cs-hero_meta-value">2026</span>
+
+        </div>
+
+      </div>
+
+      <div class="btn-group">
+
+        <a href="https://typedirecteur.billal-boudlal.mds-paris.yt/" class="btn btn--primary btn--auto"
+          id="cta-voir-projet">
+          Voir le projet live
+          <img class="btn_arrow" src="../assets/icon/arrow.svg" alt="" />
+
+        </a>
+
+        <a href="https://www.figma.com/proto/NNnwTfzTTFfrQBe4EGjDgY/TypeDirecteur-%E2%80%93-Wireframes---Maquettes?node-id=2-2&t=enyYhcFrYR5Nbv0K-1"
+          class="btn btn--ghost btn--auto">
+          Voir le Figma
+        </a>
+
+      </div>
+
+      <div class="cs-hero_cover">
+
+        <div class="cs-hero_cover-placeholder">
+
+          <img src="../assets/maquette/TypeDirecteur - maquette .webp" alt="">
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 2 -->
+
+    <section class="cs-section" aria-label="Contexte et problème">
+
+      <p class="cs-section_number">01 - Contexte</p>
+
+      <h2 class="cs-section_label">Probleme</h2>
+
+      <div class="cs-2col cs-2col--wide">
+
+        <div>
+
+          <p class="cs-text">
+            Un DA junior passe en moyenne 2 à 4h à chercher deux typographies
+            qui fonctionnent ensemble. Pas parce qu'il manque de goût - parce
+            qu'il n'existe aucun outil qui explique POURQUOI une association
+            fonctionne ou non. Les outils existants proposent des listes.
+            Aucun ne donne la logique derrière
+          </p>
+
+        </div>
+
+        <div class="cs-insight-grid">
+
+          <div class="cs-insight-card cs-insight-card--rouge">
+
+            <i class="cs-insight-card_icon fa-solid fa-triangle-exclamation"></i>
+
+            <p class="cs-insight-card_title">
+              Trop de temps perdu sur une tâche non créative
+            </p>
+
+            <p class="cs-insight-card_text">
+              Trouver deux typos compatibles prend 2 à 4h en moyenne
+              chez un DA junior. C'est du tâtonnement pur - pas de la
+              direction artistique.
+            </p>
+
+          </div>
+
+          <div class="cs-insight-card cs-insight-card--rouge">
+
+            <i class="cs-insight-card_icon fa-solid fa-triangle-exclamation"></i>
+
+            <p class="cs-insight-card_title">
+              Les outils existants ne forment pas, ils listent
+            </p>
+
+            <p class="cs-insight-card_text">
+              Google Fonts, Fontpair, Adobe Fonts - tous proposent
+              des associations sans expliquer pourquoi elles marchent.
+              Le junior reste bloqué, et ne progresse pas.
+            </p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-lightbulb"></i>
+
+            <p class="cs-insight-card_title">
+              Opportunite identifiee
+            </p>
+
+            <p class="cs-insight-card_text">
+              Si on codifie les règles typographiques en algorithme, on peut
+              calculer un score de compatibilité ET expliquer chaque critère.
+              L'outil forme en même temps qu'il accélère.
+            </p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-lightbulb"></i>
+
+            <p class="cs-insight-card_title">
+              Contrainte a respecter
+            </p>
+
+            <p class="cs-insight-card_text">
+              100% front-end, sans serveur, sans clé API payante. Le projet
+              devait être déployable sur un hébergement mutualisé basique et
+              rester accessible gratuitement.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 3 -->
+
+    <section class="cs-section" aria-label="Recherche et personas">
+
+      <p class="cs-section_number">02 - Recherche</p>
+
+      <h2 class="cs-section_label">Persona</h2>
+
+      <p class="cs-text cs-text--intro-lg">
+        J'ai commencé par observer les frictions de mes amis créatifs
+        en situation réelle. Ce que je voyais : beaucoup de temps passé
+        à chercher des typos, des choix par défaut (toujours Roboto,
+        toujours Inter), et une frustration non verbalisée. J'ai creusé
+        pour savoir si c'était le vrai problème ou juste un symptôme.
+        Une fois le problème confirmé, j'ai fait remplir un questionnaire
+        à 7 personnes - étudiants en design et jeunes créatifs en poste -
+        pour valider l'hypothèse. Puis j'ai interviewé certains d'entre
+        eux pour comprendre pourquoi ce problème persistait.
+      </p>
+
+      <div class="cs-2col mb-gap">
+
+        <div class="cs-persona">
+
+          <div class="cs-persona_header">
+
+            <div class="cs-persona_avatar"><i class="fa-solid fa-user"></i></div>
+
+            <div>
+
+              <p class="cs-persona_name">
+                Léa, 21 ans
+              </p>
+
+              <p class="cs-persona_role">
+                Étudiante en Bachelor Design Graphique,
+                stage en agence
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="cs-persona_body">
+
+            <div>
+
+              <p class="cs-persona_col-title">Frustrations</p>
+
+              <ul class="cs-persona_list">
+
+                <li>"J'arrive pas à trouver une typo viable avec ma principale"</li>
+
+                <li>Elle retombe toujours sur les mêmes polices neutres par défaut</li>
+
+                <li>Elle ne sait pas expliquer pourquoi une association ne marche pas</li>
+
+              </ul>
+
+            </div>
+
+            <div>
+
+              <p class="cs-persona_col-title">Besoins reels</p>
+
+              <ul class="cs-persona_list">
+
+                <li>Comprendre rapidement si <br>deux polices sont <br>compatibles</li>
+
+                <li>Avoir une explication, pas juste une réponse oui/non</li>
+
+                <li>Gagner du temps sans sacrifier la qualité du choix final</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cs-persona">
+
+          <div class="cs-persona_header">
+
+            <div class="cs-persona_avatar"><i class="fa-solid fa-user"></i></div>
+
+            <div>
+
+              <p class="cs-persona_name">Karim, 25 ans</p>
+
+              <p class="cs-persona_role">Web designer freelance, 2 ans d'expérience</p>
+
+            </div>
+
+          </div>
+
+          <div class="cs-persona_body">
+
+            <div>
+
+              <p class="cs-persona_col-title">Frustrations</p>
+
+              <ul class="cs-persona_list">
+
+                <li>"Les typos viables avec ma principale sont trop basiques"</li>
+
+                <li>Il veut sortir des associations convenues mais sans prendre
+                  de risque sur des projets clients</li>
+
+                <li>Les outils existants lui proposent des suggestions sans contexte</li>
+
+              </ul>
+
+            </div>
+
+            <div>
+
+              <p class="cs-persona_col-title">Besoins reels</p>
+
+              <ul class="cs-persona_list">
+
+                <li>Explorer des associations moins évidentes avec une validation</li>
+
+                <li>Comprendre les règles pour ne plus dépendre d'un outil</li>
+
+                <li>Exporter un système typo structuré directement livrable au client</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="cs-insight-card cs-insight-card--rouge cs-insight-card--narrow">
+
+        <i class="cs-insight-card_icon fa-solid fa-quote-left"></i>
+
+        <p class="cs-insight-card_title cs-insight-card_title--quote">
+          "J'arrive pas à trouver une typo viable avec ma principale les suggestions que je trouve sont toutes trop
+          basiques."
+        </p>
+
+        <p class="cs-insight-card_text">
+          - Participant n°3, web designer freelance, 24 ans
+        </p>
+
+      </div>
+
+    </section>
+
+    <!--SECTION 4 -->
+
+    <section class="cs-section" aria-label="User Journey Map">
+
+      <p class="cs-section_number">03 - Analyse</p>
+
+      <h2 class="cs-section_label">User Journey Map</h2>
+
+      <p class="cs-text cs-text--intro">
+        Le parcours de Léa depuis le moment où elle cherche une association typographique jusqu'à ce qu'elle la valide.
+      </p>
+
+      <div class="cs-journey-wrap"><table class="cs-journey" aria-label="Customer journey map">
+
+        <thead>
+
+          <tr class="cs-journey_steps">
+
+            <th class="cs-journey_row-label" scope="col"></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">1. Besoin identifié</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">2. Recherche sur les outils
+                existants</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">3. Tâtonnement</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">4. Choix par défaut</span></th>
+
+            <th class="cs-journey_step" scope="col"><span class="cs-journey_step-name">5. Avec TypeDirecteur</span></th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Actions</th>
+
+            <td class="cs-journey_cell">
+              Elle reçoit un brief, choisit sa police titre
+            </td>
+
+            <td class="cs-journey_cell">
+              Elle ouvre Google Fonts, Fontpair, Pinterest
+            </td>
+
+            <td class="cs-journey_cell">
+              Elle teste des combinaisons manuellement dans Figma
+            </td>
+
+            <td class="cs-journey_cell">
+              Elle choisit Roboto ou DM Sans "pour ne pas prendre de risque", soumet le projet
+            </td>
+
+            <td class="cs-journey_cell">
+              Elle choisit sa police titre, lit les suggestions avec scores et explications, sélectionne, exporte
+            </td>
+
+          </tr>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Pensees</th>
+
+            <td class="cs-journey_cell">
+              "Ok j'ai ma principale, maintenant il me faut une police de corps qui tient la route"
+            </td>
+
+            <td class="cs-journey_cell">
+              "Y'a trop de choix, je sais pas par où commencer"
+            </td>
+
+            <td class="cs-journey_cell">
+              "Ça marche pas... pourquoi ça marche pas ?"
+            </td>
+
+            <td class="cs-journey_cell">
+              "C'est pas ce que je voulais mais ça passera"
+            </td>
+
+            <td class="cs-journey_cell">
+              "Je comprends pourquoi ça marche - je peux défendre ce choix au client"
+            </td>
+
+          </tr>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Emotions</th>
+
+            <td class="cs-journey_cell cs-journey_cell--neutre">
+              Neutre
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">
+              Légèrement frustré
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">
+              Frustré, perd confiance
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">
+              Perdu, résigné
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--fluide">
+              Soulagé, confiant
+            </td>
+
+          </tr>
+
+          <tr class="cs-journey_row">
+
+            <th class="cs-journey_row-label" scope="row">Frictions</th>
+
+            <td class="cs-journey_cell">
+              -
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">
+              ⚠ Trop de résultats, aucune explication, pas de critère de tri pertinent
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">
+              ⚠ 2 à 4h perdues sur une tâche non créative
+              <br>
+              ⚠ Aucun feedback sur pourquoi ça ne fonctionne pas
+            </td>
+
+            <td class="cs-journey_cell cs-journey_cell--friction">
+              ⚠ Résultat en-dessous de ses intentions créatives
+            </td>
+
+            <td class="cs-journey_cell">
+              -
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+      </div>
+
+    </section>
+
+    <!-- SECTION 5 -->
+
+    <section class="cs-section" aria-label="Architecture — User Flow">
+
+      <p class="cs-section_number">04 - Architecture</p>
+
+      <h2 class="cs-section_label">User Flow</h2>
+
+      <div class="cs-2col cs-2col--wide">
+
+        <div>
+
+          <p class="cs-text">
+            Description : Le flux complet depuis l'arrivée sur TypeDirecteur
+            jusqu'à l'export du système typographique.
+          </p>
+
+        </div>
+
+        <div class="cs-img-block">
+
+          <img src="../assets/user-flow/TypeDirecteur-User-Flow-complet.webp" alt="user flow typedirecteur">
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 6 -->
+
+    <section class="cs-section" aria-label="Solution technique — MVP">
+
+      <p class="cs-section_number">05 - Solution</p>
+
+      <h2 class="cs-section_label">MVP</h2>
+
+      <div class="cs-img-block cs-img-block--mb">
+
+        <img src="../assets/maquette/TypeDirecteur - maquete - dark-mode.png" alt="maquette site typedirecteur">
+
+      </div>
+
+      <div class="cs-2col">
+
+        <div>
+
+          <p class="cs-text">
+
+            <strong>Ce que j'ai construit :</strong><br>
+            Un outil web 100% front-end qui calcule la compatibilité entre
+            deux polices via 14 règles typographiques et génère un score de
+            0 à 100. Chaque résultat est accompagné d'une explication sur
+            pourquoi l'association fonctionne ou non - c'est ça la vraie
+            valeur ajoutée. Deux modes : suggestions automatiques ou recherche
+            libre parmi 2071 polices. Export HTML et PDF avec le système de
+            tailles recommandées pour tous les niveaux (H1 à caption).
+          </p>
+
+          <p class="cs-text">
+
+            <strong>Choix techniques :</strong><br>
+            J'ai choisi Vanilla JS sans framework parce que le projet devait
+            tourner sur un hébergement mutualisé N0C sans build tool. React
+            aurait nécessité un pipeline, une config, une couche de complexité
+            inutile pour ce périmètre. 3 semaines, 1 développeur, 0 serveur -
+            Vanilla JS était le seul choix honnête.
+
+            J'ai remplacé Google Fonts API (clé payante, RGPD problématique)
+            par Bunny Fonts + Fontsource. 2071 polices, CORS natif, gratuit,
+            conforme RGPD. Aucune raison de faire autrement.
+          </p>
+
+          <p class="cs-text">
+
+            <strong>Ce qui n'est PAS dans le MVP :</strong><br>
+            Export multi-profils Print / Réseaux sociaux, module palette de
+            couleurs, sauvegarde des associations favorites. Délibérément
+            écarté pour livrer quelque chose de fonctionnel et testé plutôt
+            qu'un outil incomplet qui fait tout mal.
+          </p>
+
+        </div>
+
+        <div class="cs-stack">
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-code"></i>
+
+            <p class="cs-insight-card_title">
+              Stack technique
+            </p>
+
+            <p class="cs-insight-card_text">
+              HTML / CSS / JS Vanilla - 12 modules, architecture modulaire
+              Bunny Fonts API - livraison polices WOFF2, RGPD, gratuit
+              Fontsource API - catalogue 2071 polices, sans authentification
+              localStorage - cache 24h, persistence des préférences
+              Algorithme maison - 14 règles typographiques, score 4 → 100
+            </p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-bullseye"></i>
+
+            <p class="cs-insight-card_title">
+              Decision de priorisation
+            </p>
+
+            <p class="cs-insight-card_text">
+              La v1 (1 semaine) a validé que l'algorithme de scoring avait du
+              sens. La v2 (2 semaines) a redesigné l'interface complète en
+              Swiss Design éditorial et refactorisé le JS en 12 modules séparés
+              avec documentation. J'aurais pu continuer à patcher la v1 - j'ai
+              préféré reconstruire proprement pour que ça soit maintenable.
+            </p>
+
+          </div>
+
+          <div class="cs-insight-card">
+
+            <i class="cs-insight-card_icon cs-insight-card_icon--muted fa-solid fa-shield-halved"></i>
+
+            <p class="cs-insight-card_title">
+              Contrainte technique majeure
+            </p>
+
+            <p class="cs-insight-card_text">
+              Bunny Fonts ne supporte pas les URLs avec 2071 familles en une
+              seule requête - l'URL devient trop longue et est rejetée
+              silencieusement. J'ai résolu ça avec un système de batch de 6
+              polices en Promise.all() et un chargement à la demande pour les
+              polices hors catalogue curé.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 7 -->
+
+    <section class="cs-section" aria-label="Tests utilisateurs et retours">
+
+      <p class="cs-section_number">06 - Tests</p>
+
+      <h2 class="cs-section_label">Ce que les gens ont dit</h2>
+
+      <p class="cs-text cs-text--intro">
+        Questionnaire envoyé à 7 étudiants en design et jeunes créatifs.
+        Interviews informelles avec 3 d'entre eux pour comprendre les
+        raisons profondes du problème. Pas de sessions formelles
+        chronométrées - des vraies conversations.
+      </p>
+
+      <div class="cs-quotes-grid cs-quotes-grid--mb">
+
+        <div class="cs-quote">
+
+          <p class="cs-quote_text">
+            "J'arrive pas à trouver une typo viable avec ma principale."
+          </p>
+
+          <span class="cs-quote_author">- PARTICIPANT N°1 - Étudiant en design, 21 ans</span>
+
+        </div>
+
+        <div class="cs-quote">
+
+          <p class="cs-quote_text">
+            "Les typos viables avec ma principale sont trop basiques -
+            des Roboto, des Inter, c'est tout ce qu'on me propose."
+          </p>
+
+          <span class="cs-quote_author">
+            - PARTICIPANT N°2 - Web designer freelance, 24 a
+          </span>
+
+        </div>
+
+      </div>
+
+      <h3 class="cs-subsection-title">
+        Ce que j'ai change.
+      </h3>
+
+      <div class="cs-iterations">
+
+        <div class="cs-iteration">
+
+          <div class="cs-iteration_badge">1</div>
+
+          <div>
+
+            <p class="cs-iteration_label">
+              PROBLÈME IDENTIFIÉ N°1 :
+            </p>
+
+            <p class="cs-iteration_desc">
+              Les utilisateurs ne comprenaient pas que les zones de texte
+              du preview étaient éditables. Personne ne cliquait dedans.
+              <br>
+              → J'ai ajouté des labels fixes <strong> "✎ Cliquez pour modifier" </strong>
+              avec bordure pointillée visible au repos.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-iteration">
+
+          <div class="cs-iteration_badge">2</div>
+
+          <div>
+
+            <p class="cs-iteration_label">
+              PROBLÈME IDENTIFIÉ N°2 :
+            </p>
+
+            <p class="cs-iteration_desc">
+              Le score de compatibilité apparaissait trop bas dans la page,
+              parfois hors du viewport. La récompense de l'action était
+              invisible.
+              <br>
+              → Redesign complet du panel score : chiffre typographique large
+              toujours visible en bas de page, panel fixe.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="cs-iteration">
+
+          <div class="cs-iteration_badge">3</div>
+
+          <div>
+
+            <p class="cs-iteration_label">
+              AJUSTEMENT N°3 :
+            </p>
+
+            <p class="cs-iteration_desc">
+              "Voie Expert" comme label ne signifiait rien pour les cibles.
+              <br>
+              → Renommé "Recherche libre" - immédiatement compréhensible.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION 8 -->
+
+    <section class="cs-section" aria-label="Bilan et apprentissages">
+
+      <p class="cs-section_number">07 - Bilan</p>
+
+      <h2 class="cs-section_label">Ce que ca a produit</h2>
+
+      <div class="cs-kpi-grid">
+
+        <div class="cs-kpi">
+
+          <p class="cs-kpi_value">2 à 4h → 30 sec</p>
+
+          <p class="cs-kpi_label">
+            Temps moyen pour trouver une association typographique viable
+            (mesuré sur les utilisateurs testés informellement)
+          </p>
+
+        </div>
+
+        <div class="cs-kpi">
+
+          <p class="cs-kpi_value">14 règles</p>
+
+          <p class="cs-kpi_label">
+            Règles typographiques codifiées issues de la théorie classique
+            du design - chacune documentée et expliquée dans l'interface
+          </p>
+
+        </div>
+
+        <div class="cs-kpi">
+
+          <p class="cs-kpi_value">2071 polices</p>
+
+          <p class="cs-kpi_label">
+            Disponibles via Bunny Fonts, sans clé API, sans coût, RGPD
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="cs-2col">
+
+        <div>
+
+          <h3 class="cs-subsection-title">
+            Ce que j'ai appris.
+          </h3>
+
+          <p class="cs-text">
+            J'ai appris que le vrai problème n'était pas "trouver une typo"
+            mais "comprendre pourquoi elle fonctionne". Si l'outil avait juste
+            suggéré des associations sans les expliquer, il aurait été un
+            Fontpair de plus. La valeur est dans la pédagogie embarquée, pas
+            dans la liste de résultats. Je pensais construire un moteur de
+            suggestions - j'ai construit un outil de formation déguisé.
+          </p>
+          <br>
+          <h3 class="cs-subsection-title">
+            Ce que je ferais differemment.
+          </h3>
+
+          <p class="cs-text">
+            Lancer des tests utilisateurs formels dès la v1 avec un protocole défini, pas attendre la v2
+            pour structurer les retours. J'ai perdu du temps à itérer sur
+            des hypothèses que des tests auraient validé ou invalidé en 2h.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3 class="cs-subsection-title">
+            La suite.
+          </h3>
+
+          <p class="cs-text">
+            Export multi-profils Print (en pt, pas en px) / Réseaux sociaux.
+            Module palette de couleurs avec 4 modes d'harmonie HSL.
+            Sauvegarde des associations favorites en localStorage.
+            À terme : commercialisation en SaaS avec compte utilisateur
+            et historique des projets.
+          </p>
+
+          <div class="btn-group btn-group--mt">
+
+            <a href="https://typedirecteur.billal-boudlal.mds-paris.yt/" class="btn btn--primary btn--auto"
+              id="cta-live">
+              Voir le projet live
+              <img class="btn_arrow" src="../assets/icon/arrow.svg" alt="" />
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Navigation projets -->
+
+  <nav class="cs-nav" aria-label="Navigation entre projets">
+
+    <a href="projet-bientot.html" class="cs-nav_link" id="nav-precedent">
+
+      <span class="cs-nav_direction">← Projet precedent</span>
+
+      <span class="cs-nav_title">Autre projet</span>
+
+    </a>
+
+    <a href="../pages/css-translator.html" class="cs-nav_link cs-nav_link--next" id="nav-suivant">
+
+      <span class="cs-nav_direction">Projet suivant →</span>
+
+      <span class="cs-nav_title">CSS - translator</span>
+
+    </a>
+
+  </nav>
+
+  <footer class="footer" role="contentinfo">
+
+    <a href="mailto:Billalboudlal.pro@gmail.com" class="footer_mail">Billalboudlal.pro@gmail.com</a>
+
+    <div class="footer_bottom">
+
+      <div class="footer_separator"></div>
+
+      <div class="footer_socials">
+
+        <div class="footer_logo"><a href="../index.html" class="footer_social-link"><img
+              src="../assets/icon/logo_boudlal_billal.svg" alt="Logo" /></a></div>
+
+        <a href="https://github.com/Mazout-A" class="footer_social-link" target="_blank" rel="noopener"><img
+            src="../assets/icon/Github.svg" alt="GitHub" /></a>
+
+        <a href="https://www.linkedin.com/in/billal-boudlal-a6442933a/" class="footer_social-link" target="_blank"
+          rel="noopener"><img src="../assets/icon/linkedin.svg" alt="LinkedIn" /></a>
+
+      </div>
+
+      <nav class="footer_mentions" aria-label="Mentions légales">
+
+        <a href="#" class="footer_mention-link">Mention legale</a>
+
+        <span>© 2026 Boudlal Billal</span>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+  <script src="../js/app.js"></script>
+
+</body>
+
+</html>
